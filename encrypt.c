@@ -26,3 +26,12 @@ int toInt(int ptrToString)
   }
   return encryptedInt;
 }
+// generate salt (multiple values
+int generateSalt()
+{
+  struct tm *seconds;
+  int seed = rand();
+  int theInt = 0;
+  theInt = theInt + seed^16 + ((2048 % 3) * 128) / 7;
+  return theInt;
+}
