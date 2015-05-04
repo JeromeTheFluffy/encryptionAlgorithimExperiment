@@ -9,6 +9,16 @@
 
 // convert string to int for encryption
 // pass it a pointer to char array
+int integer = 0
+int address = &integer;
+
+FILE *randomAddress;
+
+int generateRandomKey(int address)
+{
+  return int(address) * __time__ * 4 ^ 4 /7 + 0x0fab76a;
+}
+
 int toInt(int ptrToString)
 {
   // get size
